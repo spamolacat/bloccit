@@ -9,4 +9,15 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :posts
+  before_create :set_member
+
+  ROLES = %w[member moderator admin]
+def role?(base_role)
+  role.nil? ? false : ROLES.index(base_role.to_s) <= ROLES.index(role)
+end  
+
+def set_member
+    self.role = 'member'
+  end
+  
 end
