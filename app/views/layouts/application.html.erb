@@ -8,9 +8,11 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
       <ul class="nav nav-tabs"> 
       <li> <%= link_to "Bloccit", root_path %></li>
       <li> <%= link_to "About", about_path %></li>
+      <li> <%= link_to "Topics", topics_url %></li>
       <br> </br>
               <div class="pull-right user-info">
           <% if current_user %>
@@ -21,6 +23,8 @@
           <% end %>
        </div>
     <ul>
+    </div>
+    <div class="row">
          <% if flash[:notice] %>
         <div class="alert alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -37,6 +41,7 @@
           <%= flash[:alert] %>
         </div>
       <% end %> 
+    </div>
     <%= yield %>
     </div>
 
