@@ -28,11 +28,11 @@ class User < ActiveRecord::Base
                          password_confirmation: pass
                         )
       user.skip_confirmation!
-      user.save
+      user.save!
     end
     user
   end
-  
+
 
   ROLES = %w[member moderator admin]
 def role?(base_role)
