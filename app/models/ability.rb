@@ -11,6 +11,7 @@ def initialize(user)
       can :manage, Comment, :user_id => user.id
       can :create, Vote
       can :manage, Favorite, user_id: user.id
+      can :read, Topic
     end
 
     # Moderators can delete any post
@@ -25,5 +26,7 @@ def initialize(user)
     end
 
     can :read, :all
+    can :read, Topic, public: true
+    can :read, Post
   end
 end
