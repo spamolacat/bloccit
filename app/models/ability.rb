@@ -1,7 +1,7 @@
 class Ability
   include CanCan::Ability
 
-def initialize(user)
+ def initialize(user)
     user ||= User.new # guest user
 
     # if a member, they can manage their own posts 
