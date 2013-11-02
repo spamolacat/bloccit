@@ -1,7 +1,7 @@
 Bloccit::Application.routes.draw do
   
   get "posts/index"
-
+  resources :users, only: [:show, :index]
   resources :posts, only: [:index]
   resources :topics do
     resources :posts, except: [:index], controller: 'topics/posts' do
