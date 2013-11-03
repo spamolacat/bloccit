@@ -33,5 +33,4 @@ describe Vote do
   end
 end
   
-
 end
