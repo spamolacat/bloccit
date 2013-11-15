@@ -1,5 +1,8 @@
-Bloccit::Application.routes.draw do
+Blocipedia::Application.routes.draw do
   
+  resources :wikis
+  resources :charges
+
   get "posts/index"
   #resources :users, only: [:show, :index]
   resources :posts, only: [:index]

@@ -1,0 +1,8 @@
+<div class="wiki">
+<h2><%=link_to wiki.title, wiki%></h2>
+<ul class="actions">
+<li><%= link_to 'Edit', edit_wiki_path(wiki) , "data-wiki-id"=>wiki.id, :class=>"edit", :id=>'edit-'+wiki.id.to_s %></li>
+<li><%= link_to 'Save', wiki , "data-wiki-id"=>wiki.id, :class=>"save hide", :id=>'save-'+wiki.id.to_s %></li>
+</ul>
+<div class="content" id="content-<%=wiki.id%>"><%=raw wiki.content%></div>
+</div>

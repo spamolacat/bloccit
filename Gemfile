@@ -52,6 +52,12 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'omniauth-facebook'
 
+gem 'turbolinks'
+
+gem 'friendly_id'
+
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
